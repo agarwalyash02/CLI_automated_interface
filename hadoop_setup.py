@@ -33,6 +33,9 @@ def load_hadoop():
 			list_file()
 		elif hadoop_input == 9:
 			break
+		else:
+			print("Incorrect input please try again")
+			input("Enter to continue")
 
 
 

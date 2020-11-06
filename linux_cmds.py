@@ -1,6 +1,5 @@
 import os
 
-
 def show_linux_command():
 	print(""" 		Press 1 to check date
 		 Press 2 to see calender
