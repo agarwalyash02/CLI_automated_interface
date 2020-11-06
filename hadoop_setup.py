@@ -76,7 +76,7 @@ def check_report():
 
 def upload_file_client():
 	os.system('clear')
-	file_name = input("Enter the name of file : ")
+	file_name = input("Enter the name of file with location : ")
 	os.system('hadoop fs -put {} /'.format(file_name))
 
 def list_file():
