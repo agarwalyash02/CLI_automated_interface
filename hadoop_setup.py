@@ -4,7 +4,8 @@ import os
 def load_hadoop():
 	while True:
 		os.system('clear')
-		print('''What you want to do in hadoop
+		print('''
+			What you want to do in hadoop !!
 			1. setup the hdfc-site file
 			2. setup the core-site file
 			3. start the service of datanode

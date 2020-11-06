@@ -3,7 +3,8 @@ import os
 def load_partition():
 	while True:
 		os.system('clear')
-		print('''What you want to do in partition
+		print('''
+			What you want to do in partition !!
 			1. create a partition
 			2. format a partition
 			3. mount a partition
@@ -26,14 +27,14 @@ def load_partition():
 
 
 def create_partition():
-	print("Below are the available disk: ")
+	print("\n\nBelow are the available disk: \n\n")
 	os.system('fdisk -l')
 	disk_name = input("Enter name of disk you want to make partition: ")
-	print("After this you have to mannualy have to make partition")
+	print("\n\nAfter this you have to mannualy make partition\n\n")
 	os.system('fdisk {}'.format(disk_name))
 
 def format_partition():
-	print("Below are the available disk with partition: ")
+	print("\n\nBelow are the available disk with partition: \n\n")
 	os.system('fdisk -l')
 	partition_name = input("Enter name of partition you want to format: ")
 	os.system('mkfs.ext4 {}'.format(partition_name))
@@ -46,9 +47,9 @@ def mount_partition():
 	elif int(val) == 2:
 		fol_name = input("Enter the name of folder you want to create with location where to create: ")
 		os.system('mkdir {}'.format(fol_name))
-		print("Below are the available disk with partition: ")
+		print("\n\nBelow are the available disk with partition: \n\n")
 		os.system('fdisk -l')
-		partition_name = input("Enter name of partition you want to format: ")
+		partition_name = input("\n\nEnter name of partition you want to format: ")
 		os.system('mount {} {}'.format(partition_name,fol_name))
 
 

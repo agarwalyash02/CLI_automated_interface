@@ -1,29 +1,28 @@
 import os
 
 def show_linux_command():
-	print(""" 		Press 1 to check date
-		 Press 2 to see calender
-		 Press 3 to see Ram usage
-		 Press 0 to exit
-		 Press 9 for main menu""")
+	while True:
+		os.system('clear')
+		print(""" 		
+			Press 1 to check date
+			Press 2 to see calender
+			Press 3 to see Ram usage
+			Press 9 return to main menu
+			""")
 
-	linux_command = int(input())
+		linux_command = int(input("Enter your choice here: "))
 
-	if linux_command == 1:
-		date_show()
-	elif linux_command == 2:
-		show_calender()
-	elif linux_command == 3:
-		ram_usage()
-	elif linux_command == 0:
-		os.system('exit()')
-	else:
-		print("Invalid input plz retry")
-		clear_screen_linux()
-
-def clear_screen_linux():
-	os.system('clear')
-	show_linux_command()
+		if linux_command == 1:
+			date_show()
+		elif linux_command == 2:
+			show_calender()
+		elif linux_command == 3:
+			ram_usage()
+		elif linux_command == 9:
+			break
+		else:
+			print("Incorrect input please try again")
+			input("Enter to continue")
 
 
 def date_show():

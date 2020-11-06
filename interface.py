@@ -28,7 +28,7 @@ def initial_interface():
 		num = int(input("Enter your choice: "))
 
 		if num == 1:
-			linux_cmds.clear_screen_linux()
+			linux_cmds.show_linux_command()
 		elif num == 2:
 			hadoop_setup.load_hadoop()
 		elif num == 3:
