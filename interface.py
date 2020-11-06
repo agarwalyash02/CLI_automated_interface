@@ -1,5 +1,6 @@
 import linux_cmds
 import hadoop_setup
+import os
 print("""          _______________________
          |                       |
          |One-For-All Interface  |
@@ -19,20 +20,20 @@ def initial_interface():
 		 	Press 0 to exit""")
 		num = int(input())
 
-			if num == 1:
-				linux_cmds.clear_screen_linux()
-			elif num == 2:
-				hadoop_setup.load_hadoop()
-			elif num == 3:
-				pass
-			elif num == 4:
-				pass
-			elif num == 5:
-				pass
-			elif num == 0:
-				print("Thanks for visiting")
-				exit()
-			'''elif num == 3:'''
+		if num == 1:
+			linux_cmds.clear_screen_linux()
+		elif num == 2:
+			hadoop_setup.load_hadoop()
+		elif num == 3:
+			pass
+		elif num == 4:
+			pass
+		elif num == 5:
+			pass
+		elif num == 0:
+			print("Thanks for visiting")
+			exit()
+		'''elif num == 3:'''
 
 
 def clear_screen_interface():
