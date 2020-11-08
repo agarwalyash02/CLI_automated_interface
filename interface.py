@@ -6,6 +6,7 @@ import getpass
 import docker
 import logo
 import webserver
+import yum
 import os
 
 def initial_interface():
@@ -48,6 +49,8 @@ def initial_interface():
 			docker.load_docker_cmds()
 		elif num == 6:
 			webserver.load_webserver_cmds()
+		elif num == 7:
+			yum.load_yum_cmds()
 		elif num == 0:
 			print("Thanks for visiting")
 			exit()

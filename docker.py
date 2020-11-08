@@ -26,7 +26,7 @@ def load_docker_cmds():
             create_container()
         elif int(docker_c) == 5:
             attach_container()
-        elif hadoop_input == 9:
+        elif int(docker_c) == 9:
             break
         else:
             print("Incorrect input please try again")
