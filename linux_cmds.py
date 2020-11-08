@@ -2,7 +2,9 @@ import os
 import logo
 def show_linux_command():
 	os.system('clear')
+	os.system('tput setaf 41')
 	logo.main_menu()
+	print("\n\n\t\t------------ linux -----------------\n\n")
 	val =input("""
 		1. To run command locally
 		2. To run command remotely we use ssh protocol
@@ -12,8 +14,9 @@ def show_linux_command():
 		req['ip_of_remote'] = input("Enter the ip of remote system : ")
 	while True:
 		os.system('clear')
+		os.system('tput setaf 41')
 		logo.main_menu()
-		print(""" 		
+		print("""\n\n\t\t------------ linux -----------------\n\n	
 			Press 0 to check date
 			Press 1 to see calender
 			Press 2 to see Ram usage

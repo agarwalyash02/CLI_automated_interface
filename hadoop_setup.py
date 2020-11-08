@@ -4,8 +4,9 @@ import logo
 def load_hadoop():
 	while True:
 		os.system('clear')
+		os.system('tput setaf 41')
 		logo.main_menu()
-		print('''
+		print('''\n\n\t\t------------ Automated hadoop configuration -----------------\n\n
 			What you want to do in hadoop !!
 			1. To configure the hdfc-site file
 			2. To configure the core-site file

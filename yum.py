@@ -4,8 +4,9 @@ import logo
 def load_yum_cmds():
     while True:
         os.system("clear")
+        os.system('tput setaf 41')
         logo.main_menu()
-        print(""" 
+        print("""\n\n\t\t------------ Automated yum -----------------\n\n
             1. Configure yum repository for dvd, docker, httpd and installing epel-release
             2. check the yum repository
             3. check if software is present in yum repository and is installed or not

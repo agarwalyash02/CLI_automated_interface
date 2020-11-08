@@ -4,7 +4,7 @@ def load_cmds_aws():
     while True:
         os.system("cls")
         logo.main_menu()
-        print("""
+        print("""\n\n\t\t------------ Automated AWS CLI -----------------\n\n
         Press 1 to setup EC2 instance
         Press 2 to check current EC2 instances
         Press 3 to set up CloudFront distribution

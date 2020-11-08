@@ -4,8 +4,9 @@ import logo
 def load_docker_cmds():
     while True:
         os.system("clear")
+        os.system('tput setaf 41')
         logo.main_menu()
-        print(""" 
+        print("""\n\n\t\t------------ Automated docker -----------------\n\n
             1. Service commmands to start, stop and get status of process
             2. See current running containers
             3. View all containers

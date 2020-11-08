@@ -4,8 +4,9 @@ import logo
 def load_partition():
 	while True:
 		os.system('clear')
+		os.system('tput setaf 41')
 		logo.main_menu()
-		print('''
+		print('''\n\n\t\t------------Automated drive setup -----------------\n\n
 			What you want to do in partition !!
 			1. create a partition
 			2. format a partition

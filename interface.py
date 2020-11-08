@@ -7,6 +7,7 @@ import docker
 import logo
 import webserver
 import yum
+import lvm
 import os
 
 def initial_interface():
@@ -14,6 +15,7 @@ def initial_interface():
 	password = "team_18"
 	while(True):
 		os.system('clear')
+		os.system('tput setaf 44')
 		logo.main_menu()
 		if int(val) == 0:
 			print("Enter pass to continue : ")
@@ -25,8 +27,8 @@ def initial_interface():
 			val = 1
 
 		num = 0
-		print("\n\n")
-		print("""		 
+		print("""\n\n\t\t------------Automated menu-driven program -----------------\n\n
+	What you want to do:	 
 			Press 1 for performing Linux Command
 		 	Press 2 for performing Hadoop Setup
 		 	Press 3 for linux partitioining
@@ -34,6 +36,7 @@ def initial_interface():
 		 	Press 5 to use docker
 		 	Press 6 to use webserver
 		 	Press 7 to configure yum
+		 	Press 8 to create lvm partition
 		 	Press 0 to exit""")
 		num = int(input("Enter your choice: "))
 
@@ -51,8 +54,11 @@ def initial_interface():
 			webserver.load_webserver_cmds()
 		elif num == 7:
 			yum.load_yum_cmds()
+		elif num == 8:
+			lvm.lvm_script_caller()
 		elif num == 0:
 			print("Thanks for visiting")
+			os.system('tput setaf 0')
 			exit()
 		else:
 			print("Incorrect input please try again")

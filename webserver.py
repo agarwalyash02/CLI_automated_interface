@@ -4,8 +4,9 @@ import logo
 def load_webserver_cmds():
 	while True:	
 		os.system("clear")
+		os.system('tput setaf 41')
 		logo.main_menu()
-		ch = input("""
+		ch = input("""\n\n\t\t------------Automated WebServer configuration -----------------\n\n
 		Select your options:
 		1. for writing a code in html file to host
 		2. Service commmands to start, stop and get status of process
