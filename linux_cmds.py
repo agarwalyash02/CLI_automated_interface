@@ -1,6 +1,8 @@
 import os
-
+import logo
 def show_linux_command():
+	os.system('clear')
+	logo.main_menu()
 	val =input("""
 		1. To run command locally
 		2. To run command remotely we use ssh protocol
@@ -10,6 +12,7 @@ def show_linux_command():
 		req['ip_of_remote'] = input("Enter the ip of remote system : ")
 	while True:
 		os.system('clear')
+		logo.main_menu()
 		print(""" 		
 			Press 0 to check date
 			Press 1 to see calender
@@ -57,35 +60,35 @@ def date_show(val,req):
 		os.system('date')
 	input("Enter to continue")
 
-def show_calender():
+def show_calender(val,req):
 	if int(val) == 2:
 		os.system('ssh {} cal'.format(req['ip_of_remote']))
 	else:
 		os.system('cal')
 	input("Enter to continue")
 
-def ram_usage():
+def ram_usage(val,req):
 	if int(val) == 2:
 		os.system('ssh {} free -m'.format(req['ip_of_remote']))
 	else:
 		os.system('free -m')
 	input("Enter to continue")
     
-def running_process():
+def running_process(val,req):
 	if int(val) == 2:
 		os.system('ssh {} jobs'.format(req['ip_of_remote']))
 	else:
 		os.system('jobs')
 	input("Enter to continue")
 
-def ip_address():
+def ip_address(val,req):
 	if int(val) == 2:
 		os.system('ssh {} ifconfig enp0s3'.format(req['ip_of_remote']))
 	else:
 		os.system('ifconfig enp0s3')
 	input("Enter to continue")
     
-def who_am_i():
+def who_am_i(val,req):
 	if int(val) == 2:
 		os.system('ssh {} whoami'.format(req['ip_of_remote']))
 	else:
@@ -99,14 +102,14 @@ def firewall_start():
 		os.system('systemctl start firewalld')
 	input("Enter to continue")
     
-def firewall_stop():
+def firewall_stop(val,req):
 	if int(val) == 2:
 		os.system('ssh {} systemctl stop firewalld'.format(req['ip_of_remote']))
 	else:
 		os.system('systemctl stop firewalld')
 	input("Enter to continue")
     
-def lscpu():
+def lscpu(val,req):
 	if int(val) == 2:
 		os.system('ssh {} lscpu'.format(req['ip_of_remote']))
 	else:

@@ -1,8 +1,10 @@
 import os
+import logo
 
 def load_partition():
 	while True:
 		os.system('clear')
+		logo.main_menu()
 		print('''
 			What you want to do in partition !!
 			1. create a partition

@@ -1,13 +1,14 @@
 import os
-
+import logo
 
 def load_hadoop():
 	while True:
 		os.system('clear')
+		logo.main_menu()
 		print('''
 			What you want to do in hadoop !!
-			1. setup the hdfc-site file
-			2. setup the core-site file
+			1. To configure the hdfc-site file
+			2. To configure the core-site file
 			3. start the service of datanode
 			4. start the service of namenode
 			5. check the dfsadmin report
@@ -43,6 +44,7 @@ def load_hadoop():
 
 def setup_hdfs():
 	os.system('clear')
+	logo.main_menu()
 	val=input('''For configuring hdfs file . 
 			1. for namenode 
 			2. for datanode
@@ -59,6 +61,7 @@ def setup_hdfs():
 
 def setup_core():
 	os.system('clear')
+	logo.main_menu()
 	val = input('''For configuring core-site file .
 				1. for namenode
 				2. for datanode or client : 
@@ -76,17 +79,20 @@ def start_namenode():
 
 def check_report():
 	os.system('clear')
+	logo.main_menu()
 	report = os.system('hadoop dfsadmin -report')
 	print(report)
 	input("Enter to continue: ")
 
 def upload_file_client():
 	os.system('clear')
+	logo.main_menu()
 	file_name = input("Enter the name of file with location : ")
 	os.system('hadoop fs -put {} /'.format(file_name))
 
 def list_file():
 	os.system('clear')
+	logo.main_menu()
 	print(os.system('hadoop fs -ls /'))
 	input("Enter to continue")
 

@@ -1,15 +1,18 @@
 import os
-
+import logo
 def load_cmds_aws():
     while True:
         os.system("cls")
+        logo.main_menu()
         print("""
         Press 1 to setup EC2 instance
         Press 2 to check current EC2 instances
         Press 3 to set up CloudFront distribution
         Press 4 to create an S3 bucket
         press 9 return to main menu
+        Enter your choice here: 
         """)
+
         aws_a=input()
         if int(aws_a)==1:
             create_ec2()
@@ -27,6 +30,8 @@ def load_cmds_aws():
 
 
 def create_ec2():
+    os.system("cls")
+    logo.main_menu()
     print("\n")
     ami_type=["ami-0e306788ff2473ccb","ami-052c08d70def0ac62","ami-0b2f6494ff0b07a0e","ami-0cda377a1b884a1bc"]
     machine_size=['t2.nano','t2.micro','t2.small','t2.medium']
@@ -57,10 +62,14 @@ def create_ec2():
     input("Enter to continue")
 
 def check_running_instances():
+    os.system("cls")
+    logo.main_menu()
     os.system("aws ec2 describe-instances")
     input("Enter to continue")
 
 def create_cloudfront_distribution():
+    os.system("cls")
+    logo.main_menu()
     print("""
         Creates a new web distribution. You create a CloudFront distribution
         to tell CloudFront where you want content to be delivered from, and
@@ -73,6 +82,8 @@ def create_cloudfront_distribution():
     input("Enter to continue")
 
 def create_S3_bucket():
+    os.system("cls")
+    logo.main_menu()
     region_actual=['ap-south-1','us-east-1','us-east-1']
     bucket_name=input("Enter the name of the bucket ")
     r_count=input("""
